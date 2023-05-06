@@ -1,12 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    CREATE ACCOUNT
-</body>
-</html>
+{% extends 'user/master.html' %}
+{% block header %}
+<style>
+    .card{
+        width: 550px;
+        height: auto;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        box-sizing: border-box;
+        padding: 31px 40px;
+        border: 1px solid black;
+        transform: translate(-50%,-50%);
+        background: black;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container-flex">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+            <div class="text-center">
+                <h1>User Sign up</h1>
+                <strong>sign up any time!</strong>
+                
+
+            </div>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Name</label>
+                  <input type="text" class="form-control" name="name" id="fname">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" name="email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Mobile</label>
+                    <input type="text" class="form-control" name="mobile">
+                  </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password">
+                </div>
+                
+                <button type="submit" class="btn btn-primary" onclick="validate()">Signup</button>
+                {{ status }}
+            
+              </form>
+              <a style="color: blue;margin-top: 10px;" href="{% url 'user:login' %}">Already have an account?Login here</a>
+            </div>
+            </div>
+            </div>
+            </div>
+            <script>
+              function validate(){
+              var fname=document.getElementById('fname').value
+              var fname_pattern = /^[A-Z a-z]+$/
+              if(fname.match(fname_pattern) == null){
+                alert('invalid name')
+              }
+            }
+              </script>
+            {% endblock %}         

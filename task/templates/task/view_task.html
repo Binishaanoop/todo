@@ -1,0 +1,96 @@
+{% extends 'task/master.html' %}
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
+    <input type="text" placeholder="select category">
+    <select name="" id="">
+        <option value="">pending</option>
+        <option value="">all</option>
+        <option value="">completed</option>
+    </select>
+    <button>filter</button>
+</div>
+        </div>
+    </div> -->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                <div class="container-fluid">
+                <div class="col-sm-3">
+                    <input type="text" placeholder="select category" name="" id="">
+                </div>
+                <div class="col-sm-6">
+                    <select name="" id="">
+                        <option value="">pending</option>
+                        <option value="">all</option>
+                        <option value="">completed</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <button>Filter</button>
+                </div>
+            </div>
+            
+                </nav>
+            </div>
+        </div>
+    </div> -->
+    <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-sm-3" style="background-color:lavender;">select category</div>
+          <div class="col-sm-6" style="background-color:lavenderblush;"><select name="" id="" class="col-sm-6">
+            <option value="">pending</option>
+            <option value="">all</option>
+            <option value="">completed</option>
+          </select></div>
+          <div class="col-sm-3" style="background-color:lavender;"><button type="submit" class="btn btn-primary">Filter</button></div>
+        </div>
+
+      </div>
+      <table class="table table-success" style="width: 100%;">
+        <thead>
+          <tr>
+            <th scope="col">Sl</th>
+            <th scope="col">Task</th>
+            <th scope="col">Description</th>
+            <th scope="col">Date Added</th>
+            <th scope="col">Date Completed</th>
+            <th scope="col">A</th>
+
+            <th scope="col">B</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td>book1</td>
+            <td>read</td>
+            <td>2023-03-03</td>
+            <td>2023-03-04</td>
+            <td>complete</td>
+            <td><button class="btn btn-primary">Edit</button><button class="btn btn-primary">Delete</button></td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td>book2</td>
+            <td>read</td>
+            <td>2023-03-03</td>
+            <td>2023-03-04</td>
+            <td>complete</td>
+            <td></td>
+        </tr>
+          
+         
+        </tbody>
+      </table>
+{% endblock %}

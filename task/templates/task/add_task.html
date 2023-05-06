@@ -1,0 +1,47 @@
+{% extends 'task/master.html' %}
+{% block header %}
+<style>
+.card{
+    width: 550px;
+    height: auto;
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 31px 40px;
+    /* border: 1px solid black; */
+    border: none;
+    transform: translate(-50%,-50%);
+    /* background: black; */
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-flex">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+            <div class="text-center">
+                <h1>Add Task</h1>
+             </div>
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Task</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Description</label><br>
+                  <textarea name="" id="" cols="50" rows="5" class="form-control"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Add</button>
+                {{ status }}
+        </form>
+            </div>
+            </div>
+            </div>
+            </div>
+{% endblock %}
